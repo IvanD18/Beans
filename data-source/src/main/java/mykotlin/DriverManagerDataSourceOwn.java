@@ -1,4 +1,4 @@
-package myKotlin;
+package mykotlin;
 
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 

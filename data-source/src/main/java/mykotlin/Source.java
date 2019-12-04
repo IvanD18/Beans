@@ -1,4 +1,4 @@
-package myKotlin;
+package mykotlin;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;

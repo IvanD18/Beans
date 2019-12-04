@@ -1,6 +1,4 @@
-import lombok.val;
-import myKotlin.ConnectKt;
-import myKotlin.DriverManagerDataSourceOwn;
+import mykotlin.ConnectKt;
 import org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -8,9 +6,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.GenericGroovyApplicationContext;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import programmatic.ProgrammaticPropertyPlaceholderConfigurer;
 import programmatic.Source;
 
