@@ -12,7 +12,7 @@ import programmatic.Source;
 public class Main {
     public static void main(String[] args) {
         {
-            AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(javaconfig.dataSource.Source.class);
+            AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(javaconfig.Source.class);
 
             System.out.println(context.getBean("dataSource"));
 
