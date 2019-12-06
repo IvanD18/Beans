@@ -1,6 +1,5 @@
-package annotation;
+package ru.rosbank.javaschool.sqliteconnector.configuration.annotation;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;

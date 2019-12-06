@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="dataSource" class="org.sqlite.SQLiteDataSource" p:url="${db_url}" />
 
+    <bean id="connector" class="ru.rosbank.javaschool.sqliteconnector.configuration.xml.XmlSQLiteConnector" c:login="${login}" c:password="${password}" c:dataSource-ref="dataSource" />
 
-    <bean id="dataSourceXml" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="password" value="${password}"/>
-        <property name="username" value="${login}"/>
-        <property name="url" value="${url}"/>
-        <property name="driverClassName" value="${driverClassName}"/>
-
-    </bean>
-
-    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-    <property name="location" value="db.properties" />
-</bean>
-
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer" p:location="db.properties"/>
 </beans>
